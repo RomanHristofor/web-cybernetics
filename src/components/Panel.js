@@ -30,9 +30,11 @@ const Panel = ({openModal}) => {
                     </span>
                 </button>
             </div>
-            <LazyLoad height={200}>
-                <img src={imageUrl} alt="Demo" className={styles.image}/>
-            </LazyLoad>
+            <div className={styles.image}>
+                <LazyLoad>
+                    <img src={imageUrl} alt="Demo" className={styles.image}/>
+                </LazyLoad>
+            </div>
         </div>
     );
 };

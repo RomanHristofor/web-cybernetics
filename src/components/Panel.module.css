@@ -1,75 +1,134 @@
 .panel {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 20px;
-  width: 1920px;
-  height: 455px;
-  background-color: #EBF0FA;
+    background-color: #EBF0FA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    max-width: 1920px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .demoBox {
-  padding: 20px;
-  width: 910px;
-  margin-bottom: 20px;
-
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .title {
-  font-size: 30px;
-  font-weight: 500;
-  color: #1F4284;
-  text-align: left;
-  width: 538px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #1F4284;
+    text-align: left;
 }
 
 .description {
-  text-align: left;
-  width: 538px;
-  line-height: 1.5;
-  margin-bottom: 30px;
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
 .demoButton {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #244C98;
-  color: white;
-  width: 341px;
-  height: 68px;
-  border-radius: 60px;
-  padding: 12px 24px;
-  text-align: left;
-  margin-top: 10px;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-  position: relative;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #244C98;
+    border: none;
+    color: white;
+    width: 341px;
+    height: 68px;
+    border-radius: 60px;
+    padding: 12px 5px 12px 24px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    position: relative;
 }
 
 .demoButton:hover {
-  background-color: #173f7a;
+    background-color: #173f7a;
 }
 
 .iconCircle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  border-radius: 50%;
-  margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
-  color: #1F4284;
+    width: 20px;
+    height: 20px;
+    color: #1F4284;
 }
 
 .image {
-  width: 910px;
-  height: auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.demoBox, .image {
+  flex: 1;
+  width: 50%;
+}
+
+
+@media (max-width: 1440px) {
+    .panel {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .panel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .demoBox {
+        text-align: left;
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .panel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .demoBox {
+        text-align: left;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .demoButton {
+        width: 279px;
+        font-size: 15px;
+    }
 }

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import AuthModal from "./AuthModal";
+import Modal from './Modal';
+import AuthModal from './AuthModal';
 import Panel from './Panel';
 import styles from './MainPage.module.css';
 
@@ -10,12 +11,10 @@ const MainPage = () => {
     const closeModal = () => setModalOpen(false);
     return (
         <div className={styles.main}>
-            {isModalOpen && (
-                <div className={styles.overlay}>
-                    <AuthModal onClose={closeModal} />
-                </div>
-            )}
-            <Panel openModal={openModal} />
+            <Modal isModalOpen={isModalOpen}>
+                <AuthModal onClose={closeModal}/>
+            </Modal>
+            <Panel openModal={openModal}/>
         </div>
     );
 };
