@@ -1,0 +1,76 @@
+.panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  width: 1920px;
+  height: 455px;
+  background-color: #EBF0FA;
+}
+
+.demoBox {
+  padding: 20px;
+  width: 910px;
+  margin-bottom: 20px;
+
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #1F4284;
+  text-align: left;
+  width: 538px;
+}
+
+.description {
+  text-align: left;
+  width: 538px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.demoButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #244C98;
+  color: white;
+  width: 341px;
+  height: 68px;
+  border-radius: 60px;
+  padding: 12px 24px;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.demoButton:hover {
+  background-color: #173f7a;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #1F4284;
+}
+
+.image {
+  width: 910px;
+  height: auto;
+  /*max-height: 455px;*/
+}
