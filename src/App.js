@@ -6,7 +6,7 @@ import './index.css';
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="/web-cybernetics">
             <div className={styles.app}>
                 <Routes>
                     <Route path="/" element={<Main />} />

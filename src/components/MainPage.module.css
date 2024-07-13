@@ -18,10 +18,3 @@
   align-items: center;
   z-index: 1000;
 }
-
-@media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-    padding: 20px;
-  }
-}
